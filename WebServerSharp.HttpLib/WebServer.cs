@@ -33,14 +33,27 @@ public class WebServer
 
             if (!Directory.Exists(fullPath))
             {
-                OutputHttp(response, $"{fullPath} - not find");
+                OutputError(response, $"{fullPath} - not find");
+            }
+            else
+            {
+                Output(response, fullPath);
             }
         }
     }
 
-    private void OutputHttp(HttpListenerResponse response, string message)
+    private void OutputError(HttpListenerResponse response, string message)
     {
         var responseString = $"<html><head><meta charset='utf8'></head><body><h1>Error</h1><hr><p>{message}</p></body></html>";
+        var buffer = Encoding.UTF8.GetBytes(responseString);
+        response.ContentLength64 = buffer.LongLength;
+        using var output = response.OutputStream;
+        output.Write(buffer, 0, buffer.Length);
+    }
+
+    private void Output(HttpListenerResponse response, string path)
+    {
+        var responseString = File.ReadAllText($"{path}/index.html");
         var buffer = Encoding.UTF8.GetBytes(responseString);
         response.ContentLength64 = buffer.LongLength;
         using var output = response.OutputStream;
