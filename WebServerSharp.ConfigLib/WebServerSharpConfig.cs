@@ -2,20 +2,12 @@
 
 namespace WebServerSharp.ConfigLib;
 
-public class WebServerSharpConfig
+public record WebServerSharpConfig()
 {
-    public string Scheme { get; set; }
-    public string Host { get; set; }
-    public int Port { get; set; }
-    public string LocalPath { get; set; }
-
-    public WebServerSharpConfig()
-    {
-        Scheme = "http";
-        Host = "localhost";
-        Port = 8005;
-        LocalPath = @"C:\WebServerSharp";
-    }
+    public string Scheme { get; set; } = "http";
+    public string Host { get; set; } = "localhost";
+    public int Port { get; set; } = 8005;
+    public string LocalPath { get; set; } = @"C:\WebServerSharp";
 
     public static WebServerSharpConfig ImportFromJson(string path = "config.json")
     {
