@@ -1,3 +1,4 @@
+using System;
 using Xunit;
 
 namespace WebServerSharp.ConfigLib.Test;
@@ -31,5 +32,12 @@ public class WebServerSharpConfigTest
     {
         var actualConfig = WebServerSharpConfig.ImportFromJson();
         Assert.Equal(_expectedConfig, actualConfig);
+    }
+
+    [Fact]
+    public void ImportFromJsonTestConfigBadJson()
+    {
+        var actualConfig = WebServerSharpConfig.ImportFromJson("bad_config.json");
+        Assert.Equal(_expectedConfigDefault, actualConfig);
     }
 }
