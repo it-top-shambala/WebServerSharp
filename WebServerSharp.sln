@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServerSharp.ConfigLib", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServerSharp.ConfigLib.Test", "WebServerSharp.ConfigLib.Test\WebServerSharp.ConfigLib.Test.csproj", "{0086E06A-97D3-4269-B5F9-FC4E44F91E3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServerSharp.HttpLib", "WebServerSharp.HttpLib\WebServerSharp.HttpLib.csproj", "{670F9972-8A25-4C20-82C1-FAE79E914F37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{0086E06A-97D3-4269-B5F9-FC4E44F91E3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0086E06A-97D3-4269-B5F9-FC4E44F91E3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0086E06A-97D3-4269-B5F9-FC4E44F91E3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{670F9972-8A25-4C20-82C1-FAE79E914F37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{670F9972-8A25-4C20-82C1-FAE79E914F37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{670F9972-8A25-4C20-82C1-FAE79E914F37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{670F9972-8A25-4C20-82C1-FAE79E914F37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
