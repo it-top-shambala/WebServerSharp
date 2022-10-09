@@ -4,8 +4,8 @@ namespace WebServerSharp.ConfigLib.Test;
 
 public class WebServerSharpConfigTest
 {
-    private WebServerSharpConfig _expectedConfigDefault;
-    private WebServerSharpConfig _expectedConfig;
+    private readonly WebServerSharpConfig _expectedConfigDefault;
+    private readonly WebServerSharpConfig _expectedConfig;
 
     public WebServerSharpConfigTest()
     {
@@ -20,14 +20,14 @@ public class WebServerSharpConfigTest
     }
 
     [Fact]
-    public void ImportFromJson_Test_NotFile()
+    public void ImportFromJsonTestNotFile()
     {
         var actualConfig = WebServerSharpConfig.ImportFromJson("1234");
         Assert.Equal(_expectedConfigDefault, actualConfig);
     }
 
     [Fact]
-    public void ImportFromJson_Test_ConfigJson()
+    public void ImportFromJsonTestConfigJson()
     {
         var actualConfig = WebServerSharpConfig.ImportFromJson();
         Assert.Equal(_expectedConfig, actualConfig);
