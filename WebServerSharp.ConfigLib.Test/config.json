@@ -1,0 +1,6 @@
+﻿{
+  "Scheme": "https",
+  "Host": "localhost",
+  "Port": 8007,
+  "LocalPath": "C:\\WebServerSharp"
+}
