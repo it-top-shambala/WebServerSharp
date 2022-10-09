@@ -13,10 +13,7 @@ public class WebServerSharpConfigTest
         _expectedConfigDefault = new WebServerSharpConfig();
         _expectedConfig = new WebServerSharpConfig
         {
-            Scheme = "https",
-            Host = "localhost",
-            Port = 8007,
-            LocalPath = @"C:\WebServerSharp"
+            Scheme = "https", Host = "localhost", Port = 8007, LocalPath = @"C:\WebServerSharp"
         };
     }
 

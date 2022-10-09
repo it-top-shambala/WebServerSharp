@@ -11,7 +11,10 @@ public record WebServerSharpConfig()
 
     public static WebServerSharpConfig ImportFromJson(string path = "config.json")
     {
-        if (!File.Exists(path)) return new WebServerSharpConfig();
+        if (!File.Exists(path))
+        {
+            return new WebServerSharpConfig();
+        }
 
         try
         {
