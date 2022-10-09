@@ -1,3 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using WebServerSharp.HttpLib;
 
-Console.WriteLine("Hello, World!");
+var server = new WebServer();
+await server.StartAsync();
