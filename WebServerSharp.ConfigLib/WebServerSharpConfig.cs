@@ -9,6 +9,11 @@ public record WebServerSharpConfig()
     public int Port { get; set; } = 8005;
     public string LocalPath { get; set; } = @"C:\WebServerSharp";
 
+    public override string ToString()
+    {
+        return $"{Scheme}://{Host}:{Port}/";
+    }
+
     public static WebServerSharpConfig ImportFromJson(string path = "config.json")
     {
         if (!File.Exists(path))
